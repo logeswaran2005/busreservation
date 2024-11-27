@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Bus Reservation System</h1>
+</header>
+<main>
+    <section class="reservation">
+        <h2>Select Your Seat</h2>
+        <div class="bus">
+            <div class="seat-row">
+                <div class="seat" data-seat="1"></div>
+                <div class="seat" data-seat="2"></div>
+            </div>
+            <div class="seat-row">
+                <div class="seat" data-seat="3"></div>
+                <div class="seat" data-seat="4"></div>
+            </div>
+            <div class="seat-row">
+                <div class="seat" data-seat="5"></div>
+                <div class="seat" data-seat="6"></div>
+            </div>
+        </div>
+        <div class="details">
+            <h3>Booking Details</h3>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <label for="destination">Destination:</label>
+                <select id="destination" required>
+                    <option value="">Select</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Erode">Erode</option>
+                </select>
+                <label for="selectedSeat">Seat:</label>
+                <input type="text" id="selectedSeat" readonly>
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+    <section class="summary">
+        <h2>Reservation Summary</h2>
+        <ul id="reservationSummary"></ul>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
